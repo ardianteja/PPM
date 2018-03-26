@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="jm/jquery.mobile-1.4.5.css">
+		<script type="text/javascript" src="jm/jquery.js"></script>
+		<script type="text/javascript" src="jm/jquery.mobile-1.4.5.js"></script>
+		<title>Tes 1 PPM</title>
+	</head>
+	
+	<body>
+		<div data-role="page" id="Kalkulator">
+			<div data-role="header">
+				<center>
+					<label for="select-choice-0" class="select"><h2>Binary Calculator</h2></label>
+					<select name="select-choice-0" id="select-choice-1" onchange="window.location=this.options[this.selectedIndex].value">
+					<option selected disabled hidden>Menu</option>
+					<option value="#Kalkulator">Binary Calculator</option>
+					<option value="#RGB">RGB Checker</option>
+					<option value="#Rangkuman">Rangkuman</option>
+				</select>
+				</center>
+			</div>
+
+			<div data-role="content">
+				<form class="TextCenter">
+					Number to Convert:
+					<input type="number" id="number"/>
+					<br><br>
+					<button type="button" onclick="ConvertBase.dec2bin()"/>Change to Binary</button>
+					<button type="button" onclick="ConvertBase.dec2hex()"/>Change to HexaDecimal</button>
+				</form>
+			</div>
+		</div>
+
+		<div data-role="page" id="RGB">
+			<div data-role="header">
+				<center>
+					<label for="select-choice-0" class="select"><h2>RGB Checker</h2></label>
+					<select name="select-choice-0" id="select-choice-1" onchange="window.location=this.options[this.selectedIndex].value">
+					<option value="#" selected disabled hidden>Menu</option>
+					<option value="#Kalkulator">Binary Kalkulator</option>
+					<option value="#RGB">RGB Checker</option>
+					<option value="#Rangkuman">Rangkuman</option>
+				</select>
+				</center>
+			</div>
+
+			<div data-role="content">
+				<form class="TextCenter">
+					Please Input RGB Code:
+					<input type="text" id="rgbinput" required/>
+					<br>
+					<button type="button" onclick="checkFilled()"/>See Colour</button>
+					<br><br>
+					<input type="text" id="rgboutput"/>
+				</form>
+			</div>
+		</div>
+
+		<div data-role="page" id="Rangkuman">
+			<div data-role="header">
+				<center>
+					<label for="select-choice-0" class="select"><h2>Rangkuman</h2></label>
+					<select name="select-choice-0" id="select-choice-1" onchange="window.location=this.options[this.selectedIndex].value">
+					<option value="#" selected disabled hidden>Menu</option>
+					<option value="#Kalkulator">Binary Kalkulator</option>
+					<option value="#RGB">RGB Checker</option>
+					<option value="#Rangkuman">Rangkuman</option>
+				</select>
+				</center>
+			</div>
+
+			<div data-role="content">
+				<center>
+					<div style="width:80%;">
+						<h3>Rangkuman PPM</h3>
+						<p>Source Code untuk JMobile dapat dilihat dengan cara klik kanan, lalu inspect.</p>
+						
+						<br>
+						<h4>Rangkuman JMobile</h4>
+						<h4>Slider</h4>
+						<input type="range" name="slider-1" id="slider-1" value="0" min="0" max="100" data-highlight="true">
+						
+						<br>
+						
+						<h4>ListView</h4>
+						<ul data-role="listview" data-inset="true">
+							<li>Test 1</li>
+							<li>Test 2</li>
+						</ul>
+						
+						<br>
+						
+						<h4>Loader</h4>
+						<button class="show-page-loading-msg" data-textonly="true" data-textvisible="true" data-msgtext="Text only loader" data-inline="true">Text only</button>
+						<button class="hide-page-loading-msg" data-inline="true" data-icon="delete">Hide</button>
+						<br>
+						<h4>Panel</h4>
+						<a href="#mypanel" data-role="button" data-inline="true" data-icon="bars" class="ui-button ui-shadow ui-corner-all ui-button-inline ui-widget ui-button-inherit" role="button">Open Panel</a>
+						<div data-role="panel" id="mypanel">
+						</div>
+						
+						<br>
+						
+						<h4>Responsive Grid</h4>
+						<div class="ui-grid-b my-breakpoint">
+							<div class="ui-block-a">Block A</div>
+							<div class="ui-block-b">Block B</div>
+							<div class="ui-block-c">Block C</div>
+						</div>
+						<br>
+						
+						<h4>Rangkuman GitHub</h4>
+						<p align="left">
+							git init<br>
+							git config --global user.email "mail@mail.co" <br>
+							git config --global user.name "nama anda"<br>
+							git status<br>
+							git add .<br>
+							git add nama_file.php<br>
+							git commit -m "pesan"<br>
+							git log<br> 
+							git log --oneline<br>
+							git log --author='nama_author'<br>
+							git log nama_file.php<br>
+							git log nomor_commit<br>
+							git diff<br>
+							git diff nama_file.php<br>
+							git checkout nama_file.html // kembalikan file modified ke sebelum modified<br>
+							git reset nama_file.html // kembalikan file staged ke modified<br>
+							git checkout HEAD~3 index.php // kembalikan file ke 3 commit sebelumnya <br>
+							git checkout nomor_commit nama_file.php // kembalikan file ke commit tertentu menggunakan nomor_commit<br>
+							git revert 32d5e -n // kembalikan semua file ke suatu commit dan dalam kondisi staged<br>
+							git branch nama_branch<br>
+							git checkout nama_branch<br>
+							ls<br>
+							git merge nama_branch<br>
+							git remote -v<br>
+							git remote add nama url<br>
+							git remote rm nama<br>
+							git remote rename nama_lama nama_baru<br>
+							git pull nama_remote nama_branch<br>
+							git fetch nama_remote // buat cabang baru nama_remote/nama_branch di repo lokal dan import semua commit dari repo remote ke repo lokal cabang baru tersebut<br>
+							git log nama_remote/nama_branch<br>
+							git merge nama_remote/nama_branch<br>
+							git push nama_remote nama_branch
+						</p>
+						<br>
+						
+					</div>
+				</center>
+			</div>
+		</div>
+		
+		<script>
+			var inputVal = document.getElementById("rgbinput");
+			var outputVal = document.getElementById("rgboutput");
+			
+			function checkFilled() {
+				var rxValidRgb = /^\#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/
+				if (rxValidRgb.test(inputVal.value)) {
+					if (inputVal.value != "") {
+						outputVal.style.backgroundColor = inputVal.value;
+					}
+				}else{
+					outputVal.style.backgroundColor = "white";
+					alert("Please fill the RGB code correctly")
+				}
+			}
+			
+			$( document ).on( "click", ".show-page-loading-msg", function() {
+			    var $this = $( this ),
+			        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+			        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+			        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+			        textonly = !!$this.jqmData( "textonly" );
+			        html = $this.jqmData( "html" ) || "";
+			    $.mobile.loading( "show", {
+			            text: msgText,
+			            textVisible: textVisible,
+			            theme: theme,
+			            textonly: textonly,
+			            html: html
+			    });
+			})
+			.on( "click", ".hide-page-loading-msg", function() {
+			    $.mobile.loading( "hide" );
+			});
+		</script>
+	</body>
+	
+	<script>
+		(function(){
+
+			var ConvertBase = function (num) {
+				return {
+					from : function (baseFrom) {
+						return {
+							to : function (baseTo) {
+								return parseInt(num, baseFrom).toString(baseTo);
+							}
+						};
+					}
+				};
+			};
+			
+			// decimal to binary
+			ConvertBase.dec2bin = function () {
+				if(document.getElementById("number").value!=""){
+					alert(ConvertBase(document.getElementById('number').value).from(10).to(2));
+				}else{alert("Please fill the number")}
+			};
+			
+			// decimal to hexadecimal
+			ConvertBase.dec2hex = function () {
+				if(document.getElementById("number").value!=""){
+					alert(ConvertBase(document.getElementById('number').value).from(10).to(16));
+				}else{alert("Please fill the number")}
+			};
+			
+			
+			this.ConvertBase = ConvertBase;
+		
+		})(this);
+	</script>
+</html>
